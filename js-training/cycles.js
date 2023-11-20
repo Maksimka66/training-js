@@ -85,22 +85,22 @@
 
 // НСД двох чисел
 
-const result = (a, b) => {
-  const smallerNum = Math.min(a, b);
-  const largerNum = Math.max(a, b);
+// const result = (a, b) => {
+//   const smallerNum = Math.min(a, b);
+//   const largerNum = Math.max(a, b);
 
-  if (smallerNum <= 0) {
-    return 'Enter two positive numbers';
-  }
-  let numbers = [];
-  for (let i = 1; i <= smallerNum; i++) {
-    if (smallerNum % i === 0 && largerNum % i === 0) {
-      numbers.push(i);
-    }
-  }
-  return numbers[numbers.length - 1];
-};
+//   if (smallerNum <= 0) {
+//     return 'Enter two positive numbers';
+//   }
+//   let numbers = [];
+//   for (let i = 1; i <= smallerNum; i++) {
+//     if (smallerNum % i === 0 && largerNum % i === 0) {
+//       numbers.push(i);
+//     }
+//   }
+//   return numbers[numbers.length - 1];
+// };
 
-console.log(result(12, -30));
-console.log(result(27, 21));
-console.log(result(6, 12));
+// console.log(result(12, -30));
+// console.log(result(27, 21));
+// console.log(result(6, 12));
