@@ -121,9 +121,29 @@
 
 // console.log(sort(persons));
 
-
 //TODO:=========task-10=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
-const nums = [1, 2, 3, 4, 5]
+// const nums = [21, 19, 7, 4, 5];
+
+// const calculateSum = arr => arr.reduce((acum, element) => acum + element, 0);
+
+// console.log(calculateSum(nums));
+
+//TODO:=========task-11=================
+// У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
+
+// const firstArrOfNums = [25, 7, 4, 12, 5];
+// const secondArrOfNums = [1, 2, 3, 4, 5];
+
+// const calculateValue = arr =>
+//   arr.reduce((acc, num) => acc + num / arr.length, 0);
+
+// console.log(calculateValue(firstArrOfNums));
+// console.log(calculateValue(secondArrOfNums));
+
+// ! this
+//TODO:=========task-01=================
+// Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
+
 
