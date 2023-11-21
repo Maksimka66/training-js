@@ -93,6 +93,30 @@
 
 // console.log(checkingEven(evenNums));
 
-
 //TODO:=========task-05=================
-// Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
+// Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 7.
+
+// const nums = [7, 2, 3, 4, 5];
+
+// const firstElem = arrayOfNumbers => arrayOfNumbers.find(element => element > 3);
+
+// console.log(firstElem(nums));
+
+//TODO:=========task-06=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+//TODO:===============task-07===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+//TODO:===============task-8===============================
+//  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+
+const persons = [
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 31 },
+  { name: 'Bob', age: 19 },
+];
+
+const sort = array => array.toSorted((a, b) => a.age - b.age);
+
+console.log(sort(persons));
