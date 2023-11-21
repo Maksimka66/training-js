@@ -111,12 +111,19 @@
 //TODO:===============task-8===============================
 //  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
-const persons = [
-  { name: 'John', age: 27 },
-  { name: 'Jane', age: 31 },
-  { name: 'Bob', age: 19 },
-];
+// const persons = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
 
-const sort = array => array.toSorted((a, b) => a.age - b.age);
+// const sort = array => array.toSorted((a, b) => a.age - b.age);
 
-console.log(sort(persons));
+// console.log(sort(persons));
+
+
+//TODO:=========task-10=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+const nums = [1, 2, 3, 4, 5]
+
