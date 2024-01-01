@@ -1,39 +1,43 @@
-// Знайти два числа з масиву [1, 3, 5, 4, 6, 8, 6], які в сумі дають число 8
+const colorPalette = document.querySelector('.color-palette');
+const output = document.querySelector('.output');
 
-const numbers = [1, 3, 5, 4, 6, 8, 6];
+colorPalette.addEventListener('click', selectColor);
 
+// This is where delegation «magic» happens
+function selectColor(event) {
+  if (event.target.nodeName !== 'BUTTON') {
+    return;
+  }
 
-// Перше рішення
+  const selectedColor = event.target.dataset.color;
+  output.textContent = `Selected color: ${selectedColor}`;
+  output.style.color = selectedColor;
+}
 
-// let targetSum = 8;
+// Some helper functions to render palette items
+createPaletteItems();
 
-// function findNumberPair(numbers, targetSum) {
-//   for (let i = 0; i < numbers.length; i++) {
-//     for (let j = i + 1; j < numbers.length; j++) {
-//       if (numbers[i] + numbers[j] === targetSum) {
-//         return [numbers[i], numbers[j]];
-//       }
-//     }
-//   }
+function createPaletteItems() {
+  const items = [];
+  for (let i = 0; i < 60; i++) {
+    const color = getRandomHexColor();
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.dataset.color = color;
+    item.style.backgroundColor = color;
+    item.classList.add('item');
+    items.push(item);
+  }
+  colorPalette.append(...items);
+}
 
-//   return [];
-// }
+function getRandomHexColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
 
-// let result = findNumberPair(numbers, targetSum);
-// console.log(result);
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
 
-
-// Друге рішення
-
-// let sum = 0;
-
-// for (let i = 0; i < arr.length; i++) {
-//   for (const num of arr) {
-//     let result = num + arr[i];
-//     if (result === 8 && num !== arr[i]) {
-//       sum = `[${num}, ${arr[i]}]`;
-//       break;
-//     }
-//   }
-// }
-// console.log(sum);
+  return color;
+}
