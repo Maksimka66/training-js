@@ -1,15 +1,17 @@
-const setBtn = document.querySelector('.js-set');
-const clearBtn = document.querySelector('.js-clear');
-let timeoutId;
+const startBtn = document.querySelector('.js-start');
+const stopBtn = document.querySelector('.js-stop');
+let intervalId = null;
 
-setBtn.addEventListener('click', () => {
-  timeoutId = setTimeout(() => {
-    console.log('I love async JS!');
-  }, 2000);
-  console.log(timeoutId);
+startBtn.addEventListener('click', () => {
+  intervalId = setInterval(() => {
+    console.log(`Interval ID: ${intervalId}, ${Math.random()}`);
+  }, 1000);
 });
 
-clearBtn.addEventListener('click', () => {
-  clearTimeout(timeoutId);
-  console.log(`Timeout with id ${timeoutId} has stopped!`);
+stopBtn.addEventListener('click', () => {
+  clearInterval(intervalId);
+  console.log(`Interval with id ${intervalId} has stopped!`);
 });
+
+const date = new Date();
+console.log(date);
